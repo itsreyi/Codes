@@ -2,22 +2,32 @@
 
 int main()
 {
-    int Numero, Esponente=0, Fattorizzazione;
-    printf("Inserisic un numero: ");
+    int Fattorizzazione, Esponente=0, Numero;
+    unsigned int i;
+
+    printf("Inserisci un numero: ");
     scanf("%d", &Numero);
     printf("\n");
 
-    for (int i = 2; Fattorizzazione!=1;)
+    Fattorizzazione = Numero; 
+
+    for (i = 2; Fattorizzazione > 1;)
     {
-        if (Numero % i == 0)
+        if (Fattorizzazione % i == 0)
         {
             Esponente++;
-            Fattorizzazione = Numero / i;
-            printf("%d^%d\n", i, Esponente);
+            Fattorizzazione = Fattorizzazione / i;
         }
         else
         {
+            if(Esponente!=0)
+            {
+                printf("%d^%d\n", i, Esponente);
+            }
+            Esponente=0;
             i++;
         }
+        
     }
+    printf("%d^%d\n", i, Esponente);
 }
