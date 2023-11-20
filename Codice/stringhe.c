@@ -8,8 +8,8 @@ int main()
     int i, j;
     int InzioCont=0, FineCont;
 
-    char s1[DIM]="zio";
-    char s2[DIM]="Tizio";
+    char s1[DIM];
+    char s2[DIM];
 
     printf("Inserie la prima parola (Max 20 Caratteri): ");
     scanf("%s", s1);
